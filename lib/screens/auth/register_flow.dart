@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 
-/// Pantallas del flujo de registro (cliente y profesional)
-
-// 1) Elección de tipo de cuenta
 class RegisterChoiceScreen extends StatelessWidget {
   const RegisterChoiceScreen({super.key});
 
@@ -48,7 +45,6 @@ class RegisterChoiceScreen extends StatelessWidget {
   }
 }
 
-// ---------------- Cliente (a) ----------------
 class ClientNameScreen extends StatefulWidget {
   const ClientNameScreen({super.key});
 
@@ -211,8 +207,6 @@ class _ClientPasswordScreenState extends State<ClientPasswordScreen> {
   }
 
   void _createAccount() {
-    // En el MVP solo navegamos a home y limpiamos el historial
-    // para que no aparezca el botón de regresar.
     Navigator.pushNamedAndRemoveUntil(context, '/home', (route) => false);
   }
 
@@ -518,7 +512,6 @@ class _ProfPasswordScreenState extends State<ProfPasswordScreen> {
   }
 
   void _createAccount() {
-    // Limpiar historial y navegar a home para evitar botón atrás
     Navigator.pushNamedAndRemoveUntil(context, '/home', (route) => false);
   }
 

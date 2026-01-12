@@ -1,17 +1,13 @@
 import 'package:flutter/material.dart';
 
-/// Pantalla de perfil completa (usada por la ruta `/perfil`)
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
 
   @override
-  Widget build(BuildContext context) => Scaffold(
-    // appBar: AppBar(title: const Text('Perfil texto de mierda')),
-    body: SafeArea(child: const ProfileContent()),
-  );
+  Widget build(BuildContext context) =>
+      Scaffold(body: SafeArea(child: const ProfileContent()));
 }
 
-/// Contenido de perfil (sin Scaffold) para usar dentro del layout principal
 class ProfileContent extends StatelessWidget {
   const ProfileContent({super.key});
 
@@ -24,11 +20,9 @@ class ProfileContent extends StatelessWidget {
         children: [
           const SizedBox(height: 8),
           const SizedBox(height: 16),
-          // Aquí puedes añadir más opciones de perfil
           const Expanded(child: Center(child: Text('Aquí va el perfil'))),
           ElevatedButton.icon(
             onPressed: () {
-              // Cerrar sesión: redirige a la pantalla de login
               Navigator.pushNamedAndRemoveUntil(
                 context,
                 '/login',

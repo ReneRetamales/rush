@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-// ...existing code...
 
-/// Pantalla principal con barra de navegación inferior
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -16,7 +14,6 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
-/// Widget reutilizable con ejemplos de texto y botón (usado en Home)
 class PlaceholderTemplate extends StatelessWidget {
   const PlaceholderTemplate({super.key});
 

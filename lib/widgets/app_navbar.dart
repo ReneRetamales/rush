@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-/// Barra de navegación inferior reutilizable para la app
 class AppNavbar extends StatelessWidget {
   final int currentIndex;
   final ValueChanged<int> onTap;

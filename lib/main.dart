@@ -1,7 +1,3 @@
-// Plantilla básica de `main.dart`
-// - Comentarios y estructura mínima para empezar a modificar
-// - Rutas simples, ejemplo de botón y Snackbar
-
 import 'package:flutter/material.dart';
 import 'screens/auth/login_screen.dart';
 import 'screens/auth/register_flow.dart';
@@ -28,11 +24,9 @@ class MyApp extends StatelessWidget {
       routes: {
         '/login': (context) => const LoginScreen(),
         '/register': (context) => const RegisterChoiceScreen(),
-        // Flujo de registro - cliente
         '/register/client/name': (context) => const ClientNameScreen(),
         '/register/client/email': (context) => const ClientEmailScreen(),
         '/register/client/password': (context) => const ClientPasswordScreen(),
-        // Flujo de registro - profesional
         '/register/professional/business': (context) =>
             const ProfBusinessNameScreen(),
         '/register/professional/type': (context) => const ProfTypeScreen(),
@@ -47,11 +41,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// Las pantallas `HomeScreen`, `MapScreen` y `ProfileScreen` fueron movidas a
-// `lib/screens/home/`, `lib/screens/map/` y `lib/screens/profile/`
-// respectivamente. Mantengo sólo los imports en `main.dart`.
-
-/// Widget principal con BottomNavigationBar y control de pantallas
 class MainNavigation extends StatefulWidget {
   const MainNavigation({super.key});
 

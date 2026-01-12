@@ -22,11 +22,9 @@ class _LoginScreenState extends State<LoginScreen> {
 
   void _submit() {
     if (_formKey.currentState?.validate() ?? false) {
-      // Por ahora solo mostramos un SnackBar de demostración
       ScaffoldMessenger.of(
         context,
       ).showSnackBar(const SnackBar(content: Text('Iniciando sesión...')));
-      // Navegar a home (temporal)
       Future.delayed(const Duration(milliseconds: 500), () {
         Navigator.pushReplacementNamed(context, '/home');
       });
